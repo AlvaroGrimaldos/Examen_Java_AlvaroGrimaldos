@@ -201,7 +201,7 @@ public class MascotaDAO implements IMascotaDAO {
                 "INNER JOIN especies e ON r.especie_id = e.id " +
                 "INNER JOIN historial_medico hm ON m.id = hm.mascota_id " +
                 "INNER JOIN evento_tipos et ON hm.evento_tipo_id = et.id " +
-                "ORDER BY hm.fecha_evento DESC";
+                "ORDER BY hm.fecha_evento desc";
 
         try(Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql)) {
